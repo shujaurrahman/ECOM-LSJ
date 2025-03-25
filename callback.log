@@ -1,0 +1,259 @@
+2025-03-24 12:44:33 - Callback received
+Data: Array
+(
+    [session_id] => 280plob2gt40suteaht72k27q8
+    [session_data] => Array
+        (
+            [user_id] => 3
+            [username] => shuja
+            [pending_order] => Array
+                (
+                    [order_id] => ORDID1742816641
+                    [amount] => 4130
+                    [billing_name] => Shuja Ur Rahman
+                    [billing_email] => Shujaurrehman210@gmail.com
+                    [billing_mobile] => 7579966178
+                    [timestamp] => 1742816641
+                )
+
+            [checkout_form_data] => Array
+                (
+                    [name] => Shuja Ur Rahman
+                    [email] => Shujaurrehman210@gmail.com
+                    [mobile] => 7579966178
+                    [address1] => HN0 805 MOHALLAH MOHD WASIL PILIBHIT
+                    [address2] => NEAR BELON KA CHAURAHA
+                    [city] => PILIBHIT
+                    [state] => Uttar Pradesh
+                    [pincode] => 262001
+                    [shipping_name] => 
+                    [shipping_email] => 
+                    [shipping_mobile] => 
+                    [shipping_address1] => 
+                    [shipping_address2] => 
+                    [shipping_city] => 
+                    [shipping_state] => 
+                    [shipping_pincode] => 
+                    [quantity] => Array
+                        (
+                            [0] => 1
+                        )
+
+                    [total_products] => 1
+                    [gst] => 630
+                    [subtotal] => 3,500
+                    [total] => 4,130
+                    [grandTotal_hidden] => 
+                    [coupon_hidden] => 
+                    [discount_hidden] => 
+                    [couponType_hidden] => 
+                    [amount] => 4130
+                )
+
+        )
+
+    [get_params] => Array
+        (
+        )
+
+    [post_params] => Array
+        (
+        )
+
+)
+
+2025-03-24 13:41:12 - Callback received
+Data: Array
+(
+    [session_id] => 280plob2gt40suteaht72k27q8
+    [session_data] => Array
+        (
+            [user_id] => 3
+            [username] => shuja
+            [pending_order] => Array
+                (
+                    [order_id] => ORDID1742820052
+                    [amount] => 4130
+                    [billing_name] => Shuja Ur Rahman
+                    [billing_email] => Shujaurrehman210@gmail.com
+                    [billing_mobile] => 7579966178
+                    [timestamp] => 1742820052
+                )
+
+            [checkout_form_data] => Array
+                (
+                    [name] => Shuja Ur Rahman
+                    [email] => Shujaurrehman210@gmail.com
+                    [mobile] => 7579966178
+                    [address1] => HN0 805 MOHALLAH MOHD WASIL PILIBHIT
+                    [address2] => NEAR BELON KA CHAURAHA
+                    [city] => PILIBHIT
+                    [state] => Uttar Pradesh
+                    [pincode] => 262001
+                    [shipping_name] => 
+                    [shipping_email] => 
+                    [shipping_mobile] => 
+                    [shipping_address1] => 
+                    [shipping_address2] => 
+                    [shipping_city] => 
+                    [shipping_state] => 
+                    [shipping_pincode] => 
+                    [quantity] => Array
+                        (
+                            [0] => 1
+                        )
+
+                    [total_products] => 1
+                    [gst] => 630
+                    [subtotal] => 3,500
+                    [total] => 4,130
+                    [grandTotal_hidden] => 
+                    [coupon_hidden] => 
+                    [discount_hidden] => 
+                    [couponType_hidden] => 
+                    [amount] => 4130
+                )
+
+            [email] => user@user.com
+            [role] => user
+            [id] => 2
+        )
+
+    [get_params] => Array
+        (
+        )
+
+    [post_params] => Array
+        (
+        )
+
+)
+
+2025-03-25 08:23:46 - Callback received
+Data: Array
+(
+    [session_id] => e8kj87sg0ir45khsajovoad1r3
+    [session_data] => Array
+        (
+            [user_id] => 3
+            [username] => shuja
+            [checkout_form_data] => Array
+                (
+                    [name] => Shuja Ur Rahman
+                    [email] => Shujaurrehman210@gmail.com
+                    [mobile] => 7579966178
+                    [address1] => HN0 805 MOHALLAH MOHD WASIL PILIBHIT
+                    [address2] => NEAR BELON KA CHAURAHA
+                    [city] => PILIBHIT
+                    [state] => Uttar Pradesh
+                    [pincode] => 262001
+                    [shipping_name] => 
+                    [shipping_email] => 
+                    [shipping_mobile] => 
+                    [shipping_address1] => 
+                    [shipping_address2] => 
+                    [shipping_city] => 
+                    [shipping_state] => 
+                    [shipping_pincode] => 
+                    [quantity] => Array
+                        (
+                            [0] => 1
+                        )
+
+                    [total_products] => 1
+                    [gst] => 130
+                    [subtotal] => 720
+                    [total] => 850
+                    [grandTotal_hidden] => 
+                    [coupon_hidden] => 
+                    [discount_hidden] => 
+                    [couponType_hidden] => 
+                    [amount] => 850
+                )
+
+            [pending_order] => Array
+                (
+                    [order_id] => ORDID1742887400
+                    [amount] => 850
+                    [billing_name] => Shuja Ur Rahman
+                    [billing_email] => Shujaurrehman210@gmail.com
+                    [billing_mobile] => 7579966178
+                    [timestamp] => 1742887400
+                )
+
+        )
+
+    [get_params] => Array
+        (
+        )
+
+    [post_params] => Array
+        (
+        )
+
+)
+
+2025-03-25 08:29:15 - Callback received
+Data: Array
+(
+    [session_id] => e8kj87sg0ir45khsajovoad1r3
+    [session_data] => Array
+        (
+            [user_id] => 3
+            [username] => shuja
+            [checkout_form_data] => Array
+                (
+                    [name] => Shuja Ur Rahman
+                    [email] => Shujaurrehman210@gmail.com
+                    [mobile] => 7579966178
+                    [address1] => HN0 805 MOHALLAH MOHD WASIL PILIBHIT
+                    [address2] => NEAR BELON KA CHAURAHA
+                    [city] => PILIBHIT
+                    [state] => Uttar Pradesh
+                    [pincode] => 262001
+                    [shipping_name] => Shuja Ur Rahman
+                    [shipping_email] => Shujaurrehman210@gmail.com
+                    [shipping_mobile] => 7579966178
+                    [shipping_address1] => HN0 805 MOHALLAH MOHD WASIL PILIBHIT
+                    [shipping_address2] => NEAR BELON KA CHAURAHA
+                    [shipping_city] => PILIBHIT
+                    [shipping_state] => Uttar Pradesh
+                    [shipping_pincode] => 262001
+                    [quantity] => Array
+                        (
+                            [0] => 1
+                        )
+
+                    [total_products] => 1
+                    [gst] => 630
+                    [subtotal] => 3,500
+                    [total] => 4,130
+                    [grandTotal_hidden] => 
+                    [coupon_hidden] => 
+                    [discount_hidden] => 
+                    [couponType_hidden] => 
+                    [amount] => 4130
+                )
+
+            [pending_order] => Array
+                (
+                    [order_id] => ORDID1742887735
+                    [amount] => 4130
+                    [billing_name] => Shuja Ur Rahman
+                    [billing_email] => Shujaurrehman210@gmail.com
+                    [billing_mobile] => 7579966178
+                    [timestamp] => 1742887735
+                )
+
+        )
+
+    [get_params] => Array
+        (
+        )
+
+    [post_params] => Array
+        (
+        )
+
+)
+

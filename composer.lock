@@ -1,0 +1,63 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "7a14ed114da92fdf6b567899c7e6f60b",
+    "packages": [
+        {
+            "name": "dwivedianuj9118/phonepe-payment-gateway",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dwivedianuj9118/phonepe-payment-gateway.git",
+                "reference": "c6d729d89e1514fc8ce22fd8e41790b7e1aeffe6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dwivedianuj9118/phonepe-payment-gateway/zipball/c6d729d89e1514fc8ce22fd8e41790b7e1aeffe6",
+                "reference": "c6d729d89e1514fc8ce22fd8e41790b7e1aeffe6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dwivedianuj9118\\PhonePePaymentGateway\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anuj Dwivedi",
+                    "email": "dwivedianuj9118@gmail.com"
+                }
+            ],
+            "description": "PhonePe Payment Integration class for handling phonepe payment",
+            "support": {
+                "issues": "https://github.com/dwivedianuj9118/phonepe-payment-gateway/issues",
+                "source": "https://github.com/dwivedianuj9118/phonepe-payment-gateway/tree/main"
+            },
+            "time": "2024-09-01T23:05:00+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "dwivedianuj9118/phonepe-payment-gateway": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
+}

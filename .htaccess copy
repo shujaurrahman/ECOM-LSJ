@@ -1,0 +1,14 @@
+RewriteEngine on
+
+# Handle requests for non-directory and non-file paths
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+
+# Rewrite rule for blog view URLs
+RewriteCond %{REQUEST_URI} !blog_view\.php$ [NC]
+RewriteRule ^view-blogs/([^/]+)$ blog_view.php?id=$1 [NC,L]
+
+# Rewrite rule for category URLs
+RewriteCond %{REQUEST_URI} !categories\.php$ [NC]
+RewriteRule ^categories/([^/]+)$ categories.php?id=$1 [NC,L]

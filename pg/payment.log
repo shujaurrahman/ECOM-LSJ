@@ -1,0 +1,243 @@
+2025-03-24 12:44:01 - Session data stored
+Data: Array
+(
+    [user_id] => 3
+    [username] => shuja
+    [pending_order] => Array
+        (
+            [order_id] => ORDID1742816641
+            [amount] => 4130
+            [billing_name] => Shuja Ur Rahman
+            [billing_email] => Shujaurrehman210@gmail.com
+            [billing_mobile] => 7579966178
+            [timestamp] => 1742816641
+        )
+
+    [checkout_form_data] => Array
+        (
+            [name] => Shuja Ur Rahman
+            [email] => Shujaurrehman210@gmail.com
+            [mobile] => 7579966178
+            [address1] => HN0 805 MOHALLAH MOHD WASIL PILIBHIT
+            [address2] => NEAR BELON KA CHAURAHA
+            [city] => PILIBHIT
+            [state] => Uttar Pradesh
+            [pincode] => 262001
+            [shipping_name] => 
+            [shipping_email] => 
+            [shipping_mobile] => 
+            [shipping_address1] => 
+            [shipping_address2] => 
+            [shipping_city] => 
+            [shipping_state] => 
+            [shipping_pincode] => 
+            [quantity] => Array
+                (
+                    [0] => 1
+                )
+
+            [total_products] => 1
+            [gst] => 630
+            [subtotal] => 3,500
+            [total] => 4,130
+            [grandTotal_hidden] => 
+            [coupon_hidden] => 
+            [discount_hidden] => 
+            [couponType_hidden] => 
+            [amount] => 4130
+        )
+
+)
+
+2025-03-24 12:44:02 - Payment initiation response
+Data: Array
+(
+    [orderId] => OMO2503241714021544708273
+    [state] => PENDING
+    [expireAt] => 1742989442156
+    [redirectUrl] => https://mercury-uat.phonepe.com/transact/uat_v2?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmVzT24iOjE3NDI4NDAwNDIxNTUsIm1lcmNoYW50SWQiOiJMQUtTSE1JU1JJTklVQVQiLCJtZXJjaGFudE9yZGVySWQiOiJPUkRJRDE3NDI4MTY2NDEifQ.yG-Zy2fQPF9eRW20SPJKSGUPATHkOgFOX_L4jcbRiVo
+)
+
+2025-03-24 13:40:52 - Session data stored
+Data: Array
+(
+    [user_id] => 3
+    [username] => shuja
+    [pending_order] => Array
+        (
+            [order_id] => ORDID1742820052
+            [amount] => 4130
+            [billing_name] => Shuja Ur Rahman
+            [billing_email] => Shujaurrehman210@gmail.com
+            [billing_mobile] => 7579966178
+            [timestamp] => 1742820052
+        )
+
+    [checkout_form_data] => Array
+        (
+            [name] => Shuja Ur Rahman
+            [email] => Shujaurrehman210@gmail.com
+            [mobile] => 7579966178
+            [address1] => HN0 805 MOHALLAH MOHD WASIL PILIBHIT
+            [address2] => NEAR BELON KA CHAURAHA
+            [city] => PILIBHIT
+            [state] => Uttar Pradesh
+            [pincode] => 262001
+            [shipping_name] => 
+            [shipping_email] => 
+            [shipping_mobile] => 
+            [shipping_address1] => 
+            [shipping_address2] => 
+            [shipping_city] => 
+            [shipping_state] => 
+            [shipping_pincode] => 
+            [quantity] => Array
+                (
+                    [0] => 1
+                )
+
+            [total_products] => 1
+            [gst] => 630
+            [subtotal] => 3,500
+            [total] => 4,130
+            [grandTotal_hidden] => 
+            [coupon_hidden] => 
+            [discount_hidden] => 
+            [couponType_hidden] => 
+            [amount] => 4130
+        )
+
+    [email] => user@user.com
+    [role] => user
+    [id] => 2
+)
+
+2025-03-24 13:40:53 - Payment initiation response
+Data: Array
+(
+    [orderId] => OMO2503241810537932380903
+    [state] => PENDING
+    [expireAt] => 1742992853796
+    [redirectUrl] => https://mercury-uat.phonepe.com/transact/uat_v2?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmVzT24iOjE3NDI4NDM0NTM3OTQsIm1lcmNoYW50SWQiOiJMQUtTSE1JU1JJTklVQVQiLCJtZXJjaGFudE9yZGVySWQiOiJPUkRJRDE3NDI4MjAwNTIifQ.SZtaK_G74-7aDa1F18A__of91V1UR8sIYZU9he7btD8
+)
+
+2025-03-25 08:23:20 - Session data stored
+Data: Array
+(
+    [user_id] => 3
+    [username] => shuja
+    [checkout_form_data] => Array
+        (
+            [name] => Shuja Ur Rahman
+            [email] => Shujaurrehman210@gmail.com
+            [mobile] => 7579966178
+            [address1] => HN0 805 MOHALLAH MOHD WASIL PILIBHIT
+            [address2] => NEAR BELON KA CHAURAHA
+            [city] => PILIBHIT
+            [state] => Uttar Pradesh
+            [pincode] => 262001
+            [shipping_name] => 
+            [shipping_email] => 
+            [shipping_mobile] => 
+            [shipping_address1] => 
+            [shipping_address2] => 
+            [shipping_city] => 
+            [shipping_state] => 
+            [shipping_pincode] => 
+            [quantity] => Array
+                (
+                    [0] => 1
+                )
+
+            [total_products] => 1
+            [gst] => 130
+            [subtotal] => 720
+            [total] => 850
+            [grandTotal_hidden] => 
+            [coupon_hidden] => 
+            [discount_hidden] => 
+            [couponType_hidden] => 
+            [amount] => 850
+        )
+
+    [pending_order] => Array
+        (
+            [order_id] => ORDID1742887400
+            [amount] => 850
+            [billing_name] => Shuja Ur Rahman
+            [billing_email] => Shujaurrehman210@gmail.com
+            [billing_mobile] => 7579966178
+            [timestamp] => 1742887400
+        )
+
+)
+
+2025-03-25 08:23:20 - Payment initiation response
+Data: Array
+(
+    [orderId] => OMO2503251253208673769776
+    [state] => PENDING
+    [expireAt] => 1743060200869
+    [redirectUrl] => https://mercury-uat.phonepe.com/transact/uat_v2?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmVzT24iOjE3NDI5MTA4MDA4NjgsIm1lcmNoYW50SWQiOiJMQUtTSE1JU1JJTklVQVQiLCJtZXJjaGFudE9yZGVySWQiOiJPUkRJRDE3NDI4ODc0MDAifQ.63D4CR0OVnbvXOQqw-_Vbnz6lHXqEV6ZFzuDURNVmcw
+)
+
+2025-03-25 08:28:55 - Session data stored
+Data: Array
+(
+    [user_id] => 3
+    [username] => shuja
+    [checkout_form_data] => Array
+        (
+            [name] => Shuja Ur Rahman
+            [email] => Shujaurrehman210@gmail.com
+            [mobile] => 7579966178
+            [address1] => HN0 805 MOHALLAH MOHD WASIL PILIBHIT
+            [address2] => NEAR BELON KA CHAURAHA
+            [city] => PILIBHIT
+            [state] => Uttar Pradesh
+            [pincode] => 262001
+            [shipping_name] => Shuja Ur Rahman
+            [shipping_email] => Shujaurrehman210@gmail.com
+            [shipping_mobile] => 7579966178
+            [shipping_address1] => HN0 805 MOHALLAH MOHD WASIL PILIBHIT
+            [shipping_address2] => NEAR BELON KA CHAURAHA
+            [shipping_city] => PILIBHIT
+            [shipping_state] => Uttar Pradesh
+            [shipping_pincode] => 262001
+            [quantity] => Array
+                (
+                    [0] => 1
+                )
+
+            [total_products] => 1
+            [gst] => 630
+            [subtotal] => 3,500
+            [total] => 4,130
+            [grandTotal_hidden] => 
+            [coupon_hidden] => 
+            [discount_hidden] => 
+            [couponType_hidden] => 
+            [amount] => 4130
+        )
+
+    [pending_order] => Array
+        (
+            [order_id] => ORDID1742887735
+            [amount] => 4130
+            [billing_name] => Shuja Ur Rahman
+            [billing_email] => Shujaurrehman210@gmail.com
+            [billing_mobile] => 7579966178
+            [timestamp] => 1742887735
+        )
+
+)
+
+2025-03-25 08:28:55 - Payment initiation response
+Data: Array
+(
+    [orderId] => OMO2503251258556683769839
+    [state] => PENDING
+    [expireAt] => 1743060535670
+    [redirectUrl] => https://mercury-uat.phonepe.com/transact/uat_v2?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmVzT24iOjE3NDI5MTExMzU2NjgsIm1lcmNoYW50SWQiOiJMQUtTSE1JU1JJTklVQVQiLCJtZXJjaGFudE9yZGVySWQiOiJPUkRJRDE3NDI4ODc3MzUifQ.RPLzk7LToqqVv-R5tr0lot5Izp4xDDn4jXteeJNDOzA
+)
+

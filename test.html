@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Price Range Slider</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.price-slider-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.price-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.price-inputs label {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+input[type="number"] {
+  width: 100px;
+  text-align: center;
+  font-size: 16px;
+  padding: 5px;
+  margin-right: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.slider {
+  position: relative;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 0;
+  background: transparent;
+  position: relative;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #007bff;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  background: #ddd;
+  border-radius: 5px;
+}
+
+  </style>
+</head>
+<body>
+  
+    <div class="border rounded p-3 my-2">
+        <p class="font-weight-bold">Price</p>
+
+        <!-- Price Range Slider -->
+        <div id="priceRangeSlider" style="margin: 20px 0;"></div>
+
+        <!-- Min and Max Input Boxes -->
+        <form method="get" class="d-flex justify-content-between mt-2">
+             <input type="number" name="minPrice" id="minPrice" class="form-control mr-2" placeholder="Min Price" value="{{ request()->get('minPrice', 50) }}" />
+             <input type="number" name="maxPrice" id="maxPrice" class="form-control ml-2" placeholder="Max Price" value="{{ request()->get('maxPrice', 5000) }}" />
+
+            <input type="submit" value="Go" class="px-2 text-light rounded border-0 bg-info mx-2" name="" id="">
+        </form>
+    </div>
+
+  <!-- Include the noUiSlider library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.min.css">
+
+<script>
+    // Initialize the price range slider
+    var priceSlider = document.getElementById('priceRangeSlider');
+
+    noUiSlider.create(priceSlider, {
+        start: [50, 5000],  // Starting positions of the handles
+        connect: true,      // Connect the two handles with a shaded area
+        range: {
+            'min': 0,       // Minimum price
+            'max': 10000    // Maximum price
+        },
+        step: 10            // Increment step
+    });
+
+    // Link the slider to the input fields
+    priceSlider.noUiSlider.on('update', function (values, handle) {
+        if (handle === 0) {
+            document.getElementById('minPrice').value = Math.round(values[0]);
+        } else {
+            document.getElementById('maxPrice').value = Math.round(values[1]);
+        }
+    });
+
+    // Update the slider when the input fields are changed
+    document.getElementById('minPrice').addEventListener('change', function () {
+        priceSlider.noUiSlider.set([this.value, null]);
+    });
+
+    document.getElementById('maxPrice').addEventListener('change', function () {
+        priceSlider.noUiSlider.set([null, this.value]);
+    });
+
+    // Add onchange functionality to the slider
+    priceSlider.noUiSlider.on('change', function () {
+        // Get the form element and input values
+        const form = document.querySelector('form');
+        const minPrice = document.getElementById('minPrice').value;
+        const maxPrice = document.getElementById('maxPrice').value;
+
+        // Construct the new URL with the updated query parameters
+        const url = new URL(window.location.href);
+        url.searchParams.set('minPrice', minPrice);
+        url.searchParams.set('maxPrice', maxPrice);
+
+        // Update the browser's URL without reloading the page
+        window.history.pushState({}, '', url);
+
+        // Simulate form submission by programmatically navigating to the new URL
+        window.location.href = url.toString();
+    });
+</script>
+</body>
+</html>

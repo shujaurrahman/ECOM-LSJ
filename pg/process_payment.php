@@ -2,15 +2,6 @@
 session_start();
 require_once 'authorize.php';
 
-// Custom error logging function
-function logError($message, $data = null) {
-    $log = date('Y-m-d H:i:s') . " - " . $message;
-    if ($data) {
-        $log .= "\nData: " . print_r($data, true);
-    }
-    file_put_contents(__DIR__ . '/payment.log', $log . "\n", FILE_APPEND);
-}
-
 class PaymentProcessor {
     private $base_url;
     private $auth;
@@ -38,7 +29,7 @@ class PaymentProcessor {
                 'timestamp' => time()
             ];
 
-            logError('Session data stored', $_SESSION);
+
 
             // Initialize payment
             $access_token = $this->auth->getAccessToken();
@@ -75,7 +66,7 @@ class PaymentProcessor {
             }
 
             $result = json_decode($response, true);
-            logError('Payment initiation response', $result);
+       
 
             if (isset($result['redirectUrl'])) {
                 return [
@@ -87,7 +78,7 @@ class PaymentProcessor {
             throw new Exception('No redirect URL received');
 
         } catch (Exception $e) {
-            logError('Payment Error', $e->getMessage());
+
             return [
                 'success' => false,
                 'error' => $e->getMessage()

@@ -693,10 +693,8 @@ class logics extends dbcredentials{
                     products.slug, 
                     products.status, 
                     products.created_at,
-                    products.product_price,  -- product_price
                     products.hashtags,      -- hashtags
-                    products.size_chart,     -- size_chart
-                    products.discounted_price -- discounted_price
+                    products.size_chart     -- size_chart
                 FROM 
                     products
                 LEFT JOIN categories ON products.category_id = categories.id
@@ -707,7 +705,7 @@ class logics extends dbcredentials{
                 ORDER BY products.id DESC;");
 
         if ($query->execute()) {
-            $query->bind_result($id, $category_id, $category_name, $subcategory_id, $subcategory_name, $product_code, $product_name, $featured_image, $additional_images, $stock, $ornament_id, $ornament_type, $price_per_gram, $ornament_weight, $discount_percentage, $short_description, $features_id, $features, $is_lakshmi_kubera, $is_popular_collection, $is_recommended, $general_info, $description, $slug, $status, $created_at, $product_price, $hashtags, $size_chart, $discounted_price);
+            $query->bind_result($id, $category_id, $category_name, $subcategory_id, $subcategory_name, $product_code, $product_name, $featured_image, $additional_images, $stock, $ornament_id, $ornament_type, $price_per_gram, $ornament_weight, $discount_percentage, $short_description, $features_id, $features, $is_lakshmi_kubera, $is_popular_collection, $is_recommended, $general_info, $description, $slug, $status, $created_at, $hashtags, $size_chart);
 
             $i = 0;
             while ($query->fetch()) {
@@ -738,11 +736,8 @@ class logics extends dbcredentials{
                 $res['slug'][$i] = $slug;
                 $res['statusval'][$i] = $status;
                 $res['created_at'][$i] = $created_at;
-                $res['product_price'][$i] = $product_price;  // product_price to result
                 $res['hashtags'][$i] = $hashtags;            // hashtags to result
                 $res['size_chart'][$i] = $size_chart;        // size_chart to result
-                $res['discounted_price'][$i] = $discounted_price; // discounted_price to result
-
                 $i++;
             }
             $res['count'] = $i;

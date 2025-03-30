@@ -1,5 +1,8 @@
 <?php
 session_start();
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 if (!empty($_SESSION['role'])) {
     $title = "added-products";
     require_once('header.php');
@@ -48,8 +51,6 @@ if (!empty($_SESSION['role'])) {
                                                 <td>Category</td>
                                                 <td>SubCategory</td>
                                                 <td>Product Name</td>
-                                                <td>Price</td>
-                                                <td>Discounted Price</td>
                                                 <td>Created At</td>
                                                 <td>Status</td>
                                                 <td>Best Selling</td>
@@ -71,9 +72,6 @@ if (!empty($_SESSION['role'])) {
                                                 <td><?php echo $verification['category_name'][$i]; ?></td>
                                                 <td><?php echo $verification['subcategory_name'][$i]; ?></td>
                                                 <td><?php echo $verification['product_name'][$i]; ?>(<?php echo $verification['ornament_type'][$i]; ?>)</td>
-                                                
-                                                <td><?php echo $verification['product_price'][$i]; ?></td>
-                                                <td><?php echo $verification['discounted_price'][$i]; ?>(<?php echo $verification['discount_percentage'][$i]; ?>%OFF)</td>
                                                 <td><?php echo $verification['created_at'][$i]; ?></td>
                                                 <td>
                                                     <a href="manage-status?update_record_id=<?php echo $verification['id'][$i]; ?>&update_table_name=products&statusval=<?php if($verification['statusval'][$i]==1){ echo "2"; }else{ echo "1"; } ?>&url=getProducts" onclick="return confirm('Are you sure to Update?')" class="btn btn-sm btn-outline-<?php if($verification['statusval'][$i]==1){ echo "success"; }else{ echo "danger"; } ?> rounded-pill"> <?php if($verification['statusval'][$i]==1){ echo "Active"; }else{ echo "InActive"; } ?></a>

@@ -1,30 +1,15 @@
 <?php
 session_start();
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
 require_once('./logics.class.php');
 require_once('./pg/authorize.php');
 
-// Custom error logging function
-function logError($message, $data = null) {
-    $log = date('Y-m-d H:i:s') . " - " . $message;
-    if ($data) {
-        $log .= "\nData: " . print_r($data, true);
-    }
-    file_put_contents(__DIR__ . '/callback.log', $log . "\n", FILE_APPEND);
-}
+
 
 try {
-    // Log session data at the start
-    logError('Callback received', [
-        'session_id' => session_id(),
-        'session_data' => $_SESSION,
-        'get_params' => $_GET,
-        'post_params' => $_POST
-    ]);
-
     if (!isset($_SESSION['pending_order']) || !isset($_SESSION['checkout_form_data'])) {
         throw new Exception('Invalid session data');
     }
@@ -32,17 +17,18 @@ try {
     $pending_order = $_SESSION['pending_order'];
     $form_data = $_SESSION['checkout_form_data'];
     
-    // Check payment statusx
+    // Check payment status
     $paymentStatus = checkPaymentStatus($pending_order['order_id']);
     
     if ($paymentStatus['state'] !== 'COMPLETED') {
         throw new Exception("Payment not completed. State: {$paymentStatus['state']}");
     }
 
-    // Calculate totals
-    $subtotal = isset($form_data['subtotal']) ? $form_data['subtotal'] : $pending_order['amount'];
-    $gst = isset($form_data['gst']) ? $form_data['gst'] : round($subtotal * 0.18);
-    $total = $subtotal + $gst;
+    // Get values directly from form data
+    $subtotal = str_replace(',', '', $form_data['subtotal']); // Remove commas
+    $gst = str_replace(',', '', $form_data['gst']); 
+    $total = str_replace(',', '', $form_data['total']);
+    $total_products = $form_data['total_products'];
 
     // Prepare order data with all required fields
     $orderData = [
@@ -66,13 +52,13 @@ try {
         'shipping_state' => $form_data['shipping_state'] ?? $form_data['state'],
         'shipping_pincode' => $form_data['shipping_pincode'] ?? $form_data['pincode'],
         'payment_mode' => 'phonepe',
-        'payment_amount' => $pending_order['amount'],
+        'payment_amount' => $total,
         'payment_reference' => $paymentStatus['paymentDetails'][0]['transactionId'],
         'payment_id' => $paymentStatus['paymentDetails'][0]['transactionId'],
         'payment_date' => date('Y-m-d H:i:s'),
         'order_status' => 'confirmed',
         'payment_status' => 'paid',
-        'total_products' => isset($form_data['total_products']) ? $form_data['total_products'] : 1,
+        'total_products' => $total_products,
         'subtotal' => $subtotal,
         'gst' => $gst,
         'total' => $total,
@@ -82,6 +68,13 @@ try {
         'remarks' => '',
         'status' => 1
     ];
+
+    // Also handle coupon if applied
+    if (!empty($form_data['coupon_hidden'])) {
+        $orderData['coupon_code'] = $form_data['coupon_hidden'];
+        $orderData['discount'] = $form_data['discount_hidden'];
+        $orderData['discount_type'] = $form_data['couponType_hidden'];
+    }
 
     $adminObj = new logics();
     $result = $adminObj->PlaceOrder($orderData);
@@ -98,8 +91,8 @@ try {
         throw new Exception($result['error'] ?? 'Failed to save order');
     }
 } catch (Exception $e) {
-    logError('Payment Error', $e->getMessage());
-    header('Location: payment-failed.php?reason=' . urlencode($e->getMessage()));
+    $paymentId = $paymentStatus['paymentDetails'][0]['transactionId'] ?? 'N/A';
+    header('Location: payment-failed.php?reason=' . urlencode($e->getMessage()) . '&order_id=' . $pending_order['order_id'] . '&payment_id=' . $paymentId);
     exit;
 }
 

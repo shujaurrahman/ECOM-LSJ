@@ -1,9 +1,7 @@
 <?php
 session_start();
-if (!empty($_SESSION['role'])) {
-    $title = "Order Details";
-    require_once('header.php');
-    require_once('./logics.class.php');
+require_once('header.php');
+require_once('./logics.class.php');
 $getUsers = new logics();
     $orderDetails = $getUsers->getOrderDetails($_GET['id']);
 
@@ -224,7 +222,5 @@ $getUsers = new logics();
         echo '<div class="alert alert-danger m-5">Order not found</div>';
     }
     require_once('footer.php');
-} else {
-    header('location:login.php');
-}
+
 ?>

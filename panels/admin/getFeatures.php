@@ -5,6 +5,9 @@ if (!empty($_SESSION['role'])) {
     require_once('header.php');
     require_once('./logics.class.php');
 
+
+
+    
     $getUsers = new logics();  
     $verification = $getUsers->getFeatures();
 
